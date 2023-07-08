@@ -1,4 +1,4 @@
-
+const webpack = require('webpack');
 const { ModuleFederationPlugin } = require('webpack').container;
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
