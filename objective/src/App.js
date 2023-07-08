@@ -4,7 +4,7 @@ import { StylesProvider } from "@material-ui/core/styles";
 
 const Comp = () =>  {
     return (
-        <h1>Objective</h1>
+        <h1>Objective1</h1>
     )
 }
 
