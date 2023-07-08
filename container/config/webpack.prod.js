@@ -2,6 +2,7 @@
 const webpack = require('webpack');
 const { ModuleFederationPlugin } = require('webpack').container;
 const { merge } = require("webpack-merge");
+const deps = require("../package.json").dependencies;
 const common = require("./webpack.common");
 
 const domain = process.env.PRODUCTION_DOMAIN;
