@@ -1,26 +1,31 @@
 const webpack = require('webpack');
-const { merge } = require("webpack-merge");
 const { ModuleFederationPlugin } = require('webpack').container;
+const { merge } = require("webpack-merge");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require("./webpack.common");
 const deps = require("../package.json").dependencies;
 
 const devConfiguration = {
     mode: "development",
     devServer: {
-        port: '8080',
+        port: '8083',
         historyApiFallback: {
             index: 'index.html'
         }
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
+        }),
+        new webpack.DefinePlugin({
+            NODE_ENV: JSON.stringify('development'),
+        }),
         new ModuleFederationPlugin({
-            name: 'container',
+            name: 'experience',
+            filename: 'remoteEntry.js',
             shared: deps,
-            remotes: {
-                'objective': 'objective@http://localhost:8081/remoteEntry.js',
-                'education': 'education@http://localhost:8082/remoteEntry.js',
-                'experience': 'experience@http://localhost:8083/remoteEntry.js',
-                'skills': 'skills@http://localhost:8084/remoteEntry.js',
+            exposes: {
+                './ExperienceIndex': './src/bootstrap'
             }
         })
     ]
