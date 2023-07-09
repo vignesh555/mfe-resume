@@ -23,7 +23,7 @@ const productionConfiguration = {
             name: 'container',
             shared: deps,
             remotes: {
-                'objective': `objective@objective/latest/remoteEntry.js`
+                'objective': `objective@${domain}/objective/latest/remoteEntry.js`
             }
         })
     ]
