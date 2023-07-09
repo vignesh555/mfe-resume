@@ -7,7 +7,8 @@ const deps = require("../package.json").dependencies;
 const productionConfiguration = {
     mode: 'production',
     output: {
-        filename: '[name].[contenthash].js'
+        filename: '[name].[contenthash].js',
+        publicPath: '/objective/latest/'
     },
     plugins: [
         new webpack.DefinePlugin({
