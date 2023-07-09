@@ -6,6 +6,8 @@ const deps = require("../package.json").dependencies;
 const common = require("./webpack.common");
 
 const domain = process.env.PRODUCTION_DOMAIN;
+console.log('new');
+console.log(domain);
 
 const productionConfiguration = {
     mode: 'production',
@@ -21,7 +23,7 @@ const productionConfiguration = {
             name: 'container',
             shared: deps,
             remotes: {
-                'objective': `objective@${domain}/objective/remoteEntry.js`
+                'objective': `objective@${domain}/objective/latest/remoteEntry.js`
             }
         })
     ]
