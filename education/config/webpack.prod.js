@@ -20,6 +20,9 @@ const productionConfiguration = {
             shared: deps,
             exposes: {
                 './EducationIndex': './src/bootstrap'
+            },
+            remotes: {
+                'common': `common@${domain}/common/latest/remoteEntry.js`,
             }
         })
     ]

@@ -26,6 +26,9 @@ const devConfiguration = {
             shared: deps,
             exposes: {
                 './SkillsIndex': './src/bootstrap'
+            },
+            remotes: {
+                'common': 'common@http://localhost:8085/remoteEntry.js',
             }
         })
     ]

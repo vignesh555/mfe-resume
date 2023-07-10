@@ -25,6 +25,7 @@ const productionConfiguration = {
                 'education': `education@${domain}/education/latest/remoteEntry.js`,
                 'experience': `experience@${domain}/experience/latest/remoteEntry.js`,
                 'skills': `skills@${domain}/skills/latest/remoteEntry.js`,
+                'common': `common@${domain}/common/latest/remoteEntry.js`,
             }
         })
     ]
