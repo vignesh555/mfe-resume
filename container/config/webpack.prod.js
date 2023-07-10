@@ -6,8 +6,6 @@ const deps = require("../package.json").dependencies;
 const common = require("./webpack.common");
 
 const domain = process.env.PRODUCTION_DOMAIN;
-console.log('new');
-console.log(domain);
 
 const productionConfiguration = {
     mode: 'production',

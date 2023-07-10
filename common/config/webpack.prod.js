@@ -4,24 +4,22 @@ const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
 const deps = require("../package.json").dependencies;
 
-const domain = process.env.PRODUCTION_DOMAIN;
-
 const productionConfiguration = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/objective/latest/'
+        publicPath: '/common/latest/'
     },
     plugins: [
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify('production'),
         }),
         new ModuleFederationPlugin({
-            name: 'objective',
+            name: 'common',
             filename: 'remoteEntry.js',
             shared: deps,
             exposes: {
-                './ObjectiveIndex': './src/bootstrap'
+                './CommonIndex': './src/bootstrap'
             }
         })
     ]

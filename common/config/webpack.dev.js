@@ -8,10 +8,13 @@ const deps = require("../package.json").dependencies;
 const devConfiguration = {
     mode: "development",
     devServer: {
-        port: '8081',
+        port: '8085',
         historyApiFallback: {
             index: 'index.html'
-        }
+        },
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -21,16 +24,13 @@ const devConfiguration = {
             NODE_ENV: JSON.stringify('development'),
         }),
         new ModuleFederationPlugin({
-            name: 'objective',
+            name: 'common',
             filename: 'remoteEntry.js',
             shared: deps,
             exposes: {
-                './ObjectiveIndex': './src/bootstrap'
-            },
-            remotes: {
-                'common': 'common@http://localhost:8085/remoteEntry.js',
+                './CommonIndex': './src/bootstrap'
             }
-        }),
+        })
     ]
 }
 
