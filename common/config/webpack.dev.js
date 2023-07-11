@@ -22,6 +22,7 @@ const devConfiguration = {
         }),
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify('development'),
+            DOMAIN_URL: JSON.stringify('http://localhost:8085'),
         }),
         new ModuleFederationPlugin({
             name: 'common',

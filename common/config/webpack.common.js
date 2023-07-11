@@ -31,8 +31,8 @@ module.exports = {
         new CopyWebpackPlugin({
           patterns: [
             {
-              from: 'src/assets/fonts', // Source directory containing your fonts
-              to: 'fonts', // Destination directory in the output (dist) folder
+              from: 'src/assets', // Source directory containing your fonts
+              to: 'static', // Destination directory in the output (dist) folder
             },
           ],
         }),

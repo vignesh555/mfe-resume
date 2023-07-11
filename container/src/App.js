@@ -27,9 +27,6 @@ const useStyles = makeStyles((theme) => ({
   paperWidth: {
     marginTop: theme.spacing(5),
   },
-  box: {
-    height: `calc(100vh - ${theme.spacing(25)}px)`,
-  },
   objectiveContainer: {
     height: "100%",
     border: "1px solid #CCC",
@@ -94,17 +91,15 @@ const App = () => {
       <CssBaseline />
       <Container maxWidth="lg">
         <Paper elevation={3} className={classes.paperWidth}>
-          <Box>
+          <Box p={2}>
             <BrowserRouter>
               <HeaderBar />
-              <Box m={1} className={classes.box}>
-                <Switch>
-                  <Route path="/" exact component={ObjectiveWrapper} />
-                  <Route path="/skills" component={SkillsWrapper} />
-                  <Route path="/education" component={EducationWrapper} />
-                  <Route path="/experience" component={ExperienceWrapper} />
-                </Switch>
-              </Box>
+              <Switch>
+                <Route path="/" exact component={ObjectiveWrapper} />
+                <Route path="/skills" component={SkillsWrapper} />
+                <Route path="/education" component={EducationWrapper} />
+                <Route path="/experience" component={ExperienceWrapper} />
+              </Switch>
             </BrowserRouter>
           </Box>
         </Paper>

@@ -16,7 +16,7 @@ const devConfiguration = {
             'Access-Control-Allow-Origin': '*',
         },
         proxy: {
-            '/fonts/Kalam-Regular.ttf': {
+            '/static/fonts/Kalam-Regular.ttf': {
               target: 'http://localhost:8085',
               changeOrigin: true,
             },

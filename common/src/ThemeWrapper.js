@@ -7,6 +7,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 
+
+console.log(DOMAIN_URL)
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -31,7 +34,7 @@ export const theme = createTheme({
       '@global': {
         '@font-face': {
           fontFamily: 'CustomFont-Regular',
-          src: `url('http://localhost:8085/fonts/Kalam/Kalam-Regular.ttf') format('truetype')`,
+          src: `url('${DOMAIN_URL}/static/fonts/Kalam/Kalam-Regular.ttf') format('truetype')`,
           fontWeight: 'normal',
           fontStyle: 'normal',
           fontDisplay: 'swap',
