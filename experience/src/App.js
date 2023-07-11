@@ -1,9 +1,11 @@
 import React from "react";
+import ExperienceList from "./ExperienceList";
+import { EXPERIENCE_DATA } from "./data";
 
 const App = () => {
     return (
         <>
-           <h1>Experience1</h1>
+           <ExperienceList experienceData={EXPERIENCE_DATA} />
         </>
     )
 }

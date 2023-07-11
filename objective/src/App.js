@@ -6,6 +6,8 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import CallIcon from '@material-ui/icons/Call';
 
+import { OBJECTIVE_DATA } from "./data";
+
 const useStyles = makeStyles((theme) => ({
   profileImage: {
     width: 200,
@@ -61,13 +63,7 @@ const App = () => {
         <Grid item sm={12} md={8}>
           <Box paddingX={2} paddingY={1} paddingBottom={5}>
             <Typography variant="h6">
-              Technically competent professional with over 10 years of
-              functional experience in application development involving
-              analysis, design, development, implementation and management of
-              all phases of (SDLC) full life cycle of software development
-              Hands-on experience in using advanced React, Redux, HTML, CSS,
-              JavaScript, ES6, AngularJS (1.5), Node JS, JQuery, JSON,
-              Typescript and MongoDB
+             {OBJECTIVE_DATA}
             </Typography>
           </Box>
           <div className={classes.container}>

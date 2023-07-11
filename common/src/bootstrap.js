@@ -1,24 +1,32 @@
 import React from "react";
 import ReactDom from "react-dom";
 import ThemeWrapper, { theme } from "./ThemeWrapper";
-import { 
-  Avatar, 
-  Box, 
-  Grid, 
-  Paper, 
-  Typography, 
-  CssBaseline, 
+import {
+  Avatar,
+  Box,
+  Grid,
+  Paper,
+  Typography,
+  CssBaseline,
   Container,
-  makeStyles, 
+  makeStyles,
   ThemeProvider,
   Tabs,
-  Tab
- } from "./components";
+  Tab,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemAvatar,
+  Divider,
+} from "./components";
 
 const mount = (el) => {
-  ReactDom.render(<ThemeWrapper><Typography variant="h4">
-  I am Vignesh Srinivasan,
-</Typography></ThemeWrapper>, el);
+  ReactDom.render(
+    <ThemeWrapper>
+      <Typography variant="h4">I am Vignesh Srinivasan,</Typography>
+    </ThemeWrapper>,
+    el
+  );
 };
 
 if (NODE_ENV === "development") {
@@ -28,17 +36,22 @@ if (NODE_ENV === "development") {
   }
 }
 
-export { 
+export {
   theme,
-  Avatar, 
-  Box, 
-  Grid, 
-  Paper, 
-  Typography, 
-  CssBaseline, 
+  Avatar,
+  Box,
+  Grid,
+  Paper,
+  Typography,
+  CssBaseline,
   Container,
-  makeStyles, 
+  makeStyles,
   ThemeProvider,
   Tabs,
-  Tab
+  Tab,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemAvatar,
+  Divider,
 };

@@ -1,0 +1,86 @@
+const EXPERIENCE_DATA = [
+  {
+    companyName: "HCL Technologies",
+    startYear: "2021",
+    endYear: "present",
+    location: "Singapore",
+    position: "Senior Technical Lead",
+    resposiblities: [
+      "Built digital application using modern javascript library such as React JS and Redux to accomplish for large corporate banking customers",
+      "Contributed to the upgrade of a legacy banking website using React, Redux, Material UI, Lodash, and Webpack",
+      "Built the frontend UI using React 16.9 2 with latest hooks, integrated the frontend with proxy API which is built java and oracle as database.",
+      "Lead a team of eight members to built reusable components which works similar to library package architecture.",
+      "Conducted code reviews, allocated build tasks to the team, and led technical meetings",
+      "Converted existing test cases from enzyme to react testing library",
+    ],
+  },
+  {
+    companyName: "U3 Info Tech",
+    startYear: "2020",
+    endYear: "2021",
+    location: "Singapore",
+    position: "Senior Software Engineer",
+    resposiblities: [
+      "Built the frontend UIs and the backend APIs for an investment management app using React, Redux, Node.js, GraphQL, REST, MSSQL, and Nest",
+      "Collaborated with the team lead in requirements gathering for the project",
+      "Conducted workshop related to Graphql basics to all developer in the team",
+      "Lead a team of eight members to built reusable components which works similar to library package architecture.",
+      "Converted existing table components with AG Grid react table, which helped client for smooth experience in UI and also other features such as selecting a row, copy a row and client side export",
+      "Given more suggestion to client such as bookmark feature similar to Google chrome bookmark feature. In which I used react js, redux in front end, nest js and MS SQL in backend",
+    ],
+  },
+  {
+    companyName: "Optimum Solutions",
+    startYear: "2019",
+    endYear: "2020",
+    location: "Singapore",
+    position: "Software Developer",
+    resposiblities: [
+      "Built hybrid mobile application using Cordova by converting existing react js application to native format.",
+      "Developed RWD screen using Material UI where same react js worked in all device with different size of device support",
+      "Helped system to reduce initial script loading by implementing react JS lazy loading in the screen. Also for loading large number of data using autocomplete feature.",
+      "Implemented mock API’s using express and NodeJS",
+    ],
+  },
+  {
+    companyName: "RBS",
+    startYear: "2017",
+    endYear: "2019",
+    location: "Chennai, India",
+    position: "Software Designer",
+    resposiblities: [
+      "Lead 4 members front end team to develop the application using React JS 16.2, Redux and Rambda",
+      "Conducted workshop on React JS and got good feedback from the team",
+      "Improved the test case coverage from very low percentage to 90 percentage which helped team for better code quality",
+      "Helped team to integrated with AWS POC on the bank application for Lambda serverless application with client side application",
+      "Worked with cross team in Bristol(UK). Also visited team in Bristol for two weeks to conduct session on improvement in existing code structure",
+    ],
+  },
+  {
+    companyName: "Cognizant",
+    startYear: "2014",
+    endYear: "2017",
+    location: "Chennai, India",
+    position: "Associate",
+    resposiblities: [
+      "Lead 4 members front end team to develop the application using React JS 16.2, Redux, Angular JS1.5, NodeJS and Cassandra.",
+      "Conducted various session reactJS, web pack and javascript.",
+      "Helped to train junior team members to senior level in the team.",
+      "Worked with various stackholder for the requirement gathering and helped them to deliver the project at the given timeline.",
+    ],
+  },
+  {
+    companyName: "Redisolve",
+    startYear: "2012",
+    endYear: "2014",
+    location: "Chennai, India",
+    position: "Senior Web Developer",
+    resposiblities: [
+      "Worked in 4 members as a full stack developer to develop the application using Javascript, Jquery, HTML, CSS, Dot net 2.0, MSSQL and Mongodb",
+      "Learnt quickly about the project and technical side which helped the team to deliver the project at right time",
+      "Integrated with various social media for login in such as Linked in, Facebook and Google",
+    ],
+  },
+];
+
+export { EXPERIENCE_DATA };
