@@ -1,13 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Container from "@material-ui/core/Container";
-import Paper from "@material-ui/core/Paper";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import { theme } from "common/CommonIndex";
+import { theme, Box, CssBaseline, Container, Paper, makeStyles, ThemeProvider } from "common/CommonIndex";
 import { mount as mountObjective } from "objective/ObjectiveIndex";
 import { mount as mountEducation } from "education/EducationIndex";
 import { mount as mountExperience } from "experience/ExperienceIndex";

@@ -1,11 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Container from "@material-ui/core/Container";
-import Paper from "@material-ui/core/Paper";
-import { theme } from "common/CommonIndex";
+import { theme, Box, CssBaseline, Paper, makeStyles, ThemeProvider, Container  } from "common/CommonIndex";
 
 import App from "./App";
 

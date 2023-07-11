@@ -1,7 +1,19 @@
 import React from "react";
 import ReactDom from "react-dom";
-import Typography from '@material-ui/core/Typography';
 import ThemeWrapper, { theme } from "./ThemeWrapper";
+import { 
+  Avatar, 
+  Box, 
+  Grid, 
+  Paper, 
+  Typography, 
+  CssBaseline, 
+  Container,
+  makeStyles, 
+  ThemeProvider,
+  Tabs,
+  Tab
+ } from "./components";
 
 const mount = (el) => {
   ReactDom.render(<ThemeWrapper><Typography variant="h4">
@@ -16,4 +28,17 @@ if (NODE_ENV === "development") {
   }
 }
 
-export { theme };
+export { 
+  theme,
+  Avatar, 
+  Box, 
+  Grid, 
+  Paper, 
+  Typography, 
+  CssBaseline, 
+  Container,
+  makeStyles, 
+  ThemeProvider,
+  Tabs,
+  Tab
+};

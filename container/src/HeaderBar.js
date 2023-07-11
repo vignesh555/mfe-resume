@@ -1,9 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
-import Grid from '@material-ui/core/Grid';
+import { Avatar, makeStyles, Grid  } from "common/CommonIndex";
 import NavBar from './Navbar';
-
 
 const useStyles = makeStyles((theme) => ({
   root: {

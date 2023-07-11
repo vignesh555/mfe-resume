@@ -1,8 +1,6 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
+import { Typography, Box, Grid, makeStyles } from "common/CommonIndex";
+
 import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';

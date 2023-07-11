@@ -1,7 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import { Tabs, Tab, makeStyles } from "common/CommonIndex";
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
