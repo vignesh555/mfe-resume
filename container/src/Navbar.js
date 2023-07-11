@@ -42,7 +42,7 @@ export default function NavBar() {
         <Tab label="Home" value="home" classes={{ root: classes.customTab }} />
         <Tab label="Skills" value="skills" classes={{ root: classes.customTab }}  />
         <Tab label="Experience" value="experience" classes={{ root: classes.customTab }} />
-        <Tab label="Education" value="education" classes={{ root: classes.customTab }} />
+        {/* <Tab label="Education" value="education" classes={{ root: classes.customTab }} /> */}
       </Tabs>
     </div>
   );

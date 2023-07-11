@@ -1,27 +1,26 @@
 import React from "react";
-import { 
-    Avatar, 
-    Box, 
-    makeStyles, 
-    Typography,
-    List,
-    ListItem,
-    Divider,
-    ListItemText,
-    ListItemAvatar
- } from "common/CommonIndex";
+import {
+  Avatar,
+  Box,
+  makeStyles,
+  Typography,
+  List,
+  ListItem,
+  Divider,
+  ListItemText,
+  ListItemAvatar,
+} from "common/CommonIndex";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(3),
   },
   inline: {
     display: "inline",
   },
   experienceWrapper: {
-    display: "flex",
-    width: "100%",
   },
 }));
 
@@ -31,7 +30,7 @@ export default function ExperienceList({ experienceData }) {
   return (
     <List className={classes.root}>
       {experienceData.map((oExperienceData, index) => (
-        <div key={`experience_${index}`} className={classes.experienceWrapper}>
+        <Box key={`experience_${index}`} className={classes.experienceWrapper}>
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
               <Avatar>{oExperienceData.companyName[0].toUpperCase()}</Avatar>
@@ -41,9 +40,15 @@ export default function ExperienceList({ experienceData }) {
                 <Typography>
                   Company Name: <b>{oExperienceData.companyName}</b>
                 </Typography>
-                <Typography>Start Year: <b>{oExperienceData.startYear}</b></Typography>
-                <Typography>End Year: <b>{oExperienceData.endYear}</b></Typography>
-                <Typography>Location: <b>{oExperienceData.location}</b></Typography>
+                <Typography>
+                  Start Year: <b>{oExperienceData.startYear}</b>
+                </Typography>
+                <Typography>
+                  End Year: <b>{oExperienceData.endYear}</b>
+                </Typography>
+                <Typography>
+                  Location: <b>{oExperienceData.location}</b>
+                </Typography>
                 <Typography>Roles & Responsibilities:</Typography>
                 {oExperienceData.resposiblities.map(
                   (oResposiblities, index) => (
@@ -57,8 +62,8 @@ export default function ExperienceList({ experienceData }) {
               </Box>
             </ListItemText>
           </ListItem>
-          <Divider variant="inset" component="li" />
-        </div>
+          <Divider />
+        </Box>
       ))}
     </List>
   );

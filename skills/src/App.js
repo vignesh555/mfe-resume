@@ -6,6 +6,7 @@ import {
   Avatar,
   Typography,
   Box,
+  Divider
 } from "common/CommonIndex";
 import {
   TITLE_MAP,
@@ -29,28 +30,30 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   skillsTitle: {
-    borderBottom: "1px solid #CCC",
   },
   skillName: {
     fontWeight: "bold"
+  },
+  titleCase: {
+    margin: theme.spacing(2)
   }
 }));
 
 const SkillsStructure = ({ title, skills }) => {
   const classes = useStyles();
   return (
-    <Box paddingTop={2} paddingBottom={2}>
+    <Box paddingBottom={2}>
       <Typography className={classes.skillsTitle} variant="h6">
         {title}
       </Typography>
-      <Box paddingTop={1} paddingBottom={1}>
+      <Box paddingBottom={2}>
         <Grid container spacing={2}>
           {skills.map((oSkills, index) => (
             <Grid item md={3} key={`skills_${title}_${index}`}>
               <Paper className={classes.paper} elevation={3}>
-                <Grid container spacing={2}>
+                <Grid container>
                   <Grid item>
-                    <Avatar>{oSkills.title[0].toUpperCase()}</Avatar>
+                    <Avatar className={classes.titleCase}>{oSkills.title[0].toUpperCase()}</Avatar>
                   </Grid>
                   <Grid item>
                     <Typography className={classes.skillName}>{oSkills.title}</Typography>
@@ -67,6 +70,7 @@ const SkillsStructure = ({ title, skills }) => {
           ))}
         </Grid>
       </Box>
+      <Divider />
     </Box>
   );
 };

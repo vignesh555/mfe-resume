@@ -13,6 +13,7 @@ import {
     ListItemAvatar,
 } from "./List";
 import Divider from "./Divider";
+import Chip from "./Chip";
 import { makeStyles, ThemeProvider } from "./Styles";
 
 export { 
@@ -32,4 +33,5 @@ export {
     ListItemText,
     ListItemAvatar,
     Divider,
+    Chip,
  };

@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   paperWidth: {
-    marginTop: theme.spacing(5),
+    margin: theme.spacing(5, 0),
   },
   objectiveContainer: {
     height: "100%",

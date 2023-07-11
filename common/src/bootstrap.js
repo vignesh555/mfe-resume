@@ -18,6 +18,7 @@ import {
   ListItemText,
   ListItemAvatar,
   Divider,
+  Chip,
 } from "./components";
 
 const mount = (el) => {
@@ -54,4 +55,5 @@ export {
   ListItemText,
   ListItemAvatar,
   Divider,
+  Chip,
 };
