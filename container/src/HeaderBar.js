@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar, makeStyles, Grid  } from "common/CommonIndex";
+import Logo from "./images/Logo.png";
 import NavBar from './Navbar';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +22,8 @@ export default function HeaderBar() {
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={4} sm={4}>
-            <Avatar alt="Vignesh Srinivasan" src="/static/images/VigneshS.jpeg" className={classes.large} />
+            <img src={Logo} style={{ height: 75 }} />
+            {/* <Avatar alt="Vignesh Srinivasan" src="/static/images/VigneshS.jpeg" className={classes.large} /> */}
         </Grid>
         <Grid item xs={8} sm={8}>
             <NavBar />

@@ -1,9 +1,16 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "images/[name][ext]",
+        },
+      },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
