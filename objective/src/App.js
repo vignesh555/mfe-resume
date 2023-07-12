@@ -6,6 +6,8 @@ import {
   makeStyles,
   Chip,
   Divider,
+  Button,
+  Paper,
 } from "common/CommonIndex";
 
 import EmailIcon from "@material-ui/icons/Email";
@@ -27,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
   },
   profilePic: {
     borderRadius: "100%",
-    width: "200px",
-    height: "200px",
+    width: "150px",
+    height: "150px",
   },
   circleIcon: {
     display: "flex",
@@ -57,12 +59,33 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
   const classes = useStyles();
   return (
-    <div className={classes.profileInformation}>
-      <Grid container className={classes.profilePicContainer}>
-        <Grid item sm={12} md={4}>
-          <img src={VigneshS} className={classes.profilePic} />
+    <Paper elevation={3}>
+      <Box p={2}>
+        <Grid container className={classes.profilePicContainer}>
+          <Grid item sm={12} md={12}>
+            <img src={VigneshS} className={classes.profilePic} />
+          </Grid>
+          <Grid item sm={12} md={12}>
+            <Box paddingX={2} paddingY={1}>
+              <Typography variant="h4">VIGNESH SRINIVASAN</Typography>
+            </Box>
+            <Box paddingX={2} paddingY={1} paddingBottom={5}>
+              <Typography variant="h6">{OBJECTIVE_DATA}</Typography>
+            </Box>
+            <Button variant="contained" color="primary" style={{ height: 50 }}>
+              View Resume
+            </Button>
+          </Grid>
         </Grid>
-        <Grid item sm={12} md={8}>
+      </Box>
+    </Paper>
+  );
+};
+
+export default App;
+
+{
+  /* <Grid item sm={12} md={8}>
           <Box paddingX={2} paddingY={2} paddingTop={5}>
             <Typography variant="h4">Hi There,</Typography>
           </Box>
@@ -75,9 +98,10 @@ const App = () => {
           <Box paddingX={2} paddingY={1} paddingBottom={5}>
             <Typography variant="h4">11 Years of Experience</Typography>
           </Box>
-        </Grid>
-      </Grid>
-      <Grid container>
+        </Grid> */
+}
+{
+  /* <Grid container>
         <Grid item sm={12} md={12}>
           <Typography variant="h5">Key Skills</Typography>
           <Divider />
@@ -179,9 +203,5 @@ const App = () => {
             </Box>
           </div>
         </Grid>
-      </Grid>
-    </div>
-  );
-};
-
-export default App;
+      </Grid> */
+}

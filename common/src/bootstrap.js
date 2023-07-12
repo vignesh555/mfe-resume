@@ -19,6 +19,8 @@ import {
   ListItemAvatar,
   Divider,
   Chip,
+  Button,
+  ListItemIcon,
 } from "./components";
 
 const mount = (el) => {
@@ -56,4 +58,6 @@ export {
   ListItemAvatar,
   Divider,
   Chip,
+  Button,
+  ListItemIcon,
 };

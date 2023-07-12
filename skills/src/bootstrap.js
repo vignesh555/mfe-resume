@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { theme, Box, CssBaseline, Paper, makeStyles, ThemeProvider, Container } from "common/CommonIndex";
+import { theme, Box, CssBaseline, Paper, makeStyles, ThemeProvider, Grid } from "common/CommonIndex";
 
 import App from "./App";
+import HomeSkills from "./HomeSkills";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,13 +25,18 @@ const LocalWrapper = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Paper elevation={3} className={classes.paperWidth}>
-          <Box className={classes.box}>
-            <App />
-          </Box>
-        </Paper>
-      </Container>
+      <Box marginTop={1}>
+        <Grid container>
+          <Grid item md={2}></Grid>
+          <Grid item md={8}>
+            <HomeSkills />
+            <Box marginTop={2}>
+              <App />
+            </Box>
+          </Grid>
+          <Grid item md={2}></Grid>
+        </Grid>
+      </Box>
     </ThemeProvider>
   );
 };
@@ -40,6 +46,15 @@ const ThemeWrapper = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <App />
+    </ThemeProvider>
+  );
+};
+
+const HomeSkillsWrapper = () => {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <HomeSkills />
     </ThemeProvider>
   );
 };
@@ -59,4 +74,4 @@ if (NODE_ENV === "development") {
   }
 }
 
-export { mount };
+export { mount, ThemeWrapper, HomeSkillsWrapper };

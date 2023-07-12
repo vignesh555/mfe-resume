@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { theme, Box, CssBaseline, Paper, makeStyles, ThemeProvider, Container  } from "common/CommonIndex";
+import {
+  theme,
+  Box,
+  CssBaseline,
+  Paper,
+  Grid,
+  makeStyles,
+  ThemeProvider,
+  Container,
+} from "common/CommonIndex";
 
 import App from "./App";
 
@@ -24,13 +33,15 @@ const LocalWrapper = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Paper elevation={3} className={classes.paperWidth}>
-          <Box className={classes.box}>
+      <Box marginTop={1}>
+        <Grid container>
+          <Grid item md={2}></Grid>
+          <Grid item md={8}>
             <App />
-          </Box>
-        </Paper>
-      </Container>
+          </Grid>
+          <Grid item md={2}></Grid>
+        </Grid>
+      </Box>
     </ThemeProvider>
   );
 };
@@ -59,4 +70,4 @@ if (NODE_ENV === "development") {
   }
 }
 
-export { mount };
+export { mount, ThemeWrapper as ObjectiveWrapper };

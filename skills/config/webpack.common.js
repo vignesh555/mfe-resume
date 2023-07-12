@@ -1,3 +1,5 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 module.exports = {
     module: {
         rules: [
@@ -21,4 +23,14 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: 'src/assets', // Source directory containing your fonts
+              to: 'static', // Destination directory in the output (dist) folder
+            },
+          ],
+        }),
+    ],
 };

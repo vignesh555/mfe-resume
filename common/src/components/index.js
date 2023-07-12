@@ -11,9 +11,11 @@ import {
     ListItem,
     ListItemText,
     ListItemAvatar,
+    ListItemIcon,
 } from "./List";
 import Divider from "./Divider";
 import Chip from "./Chip";
+import Button from "./Button";
 import { makeStyles, ThemeProvider } from "./Styles";
 
 export { 
@@ -34,4 +36,6 @@ export {
     ListItemAvatar,
     Divider,
     Chip,
+    Button,
+    ListItemIcon,
  };
