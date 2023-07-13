@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   paper: {
-    maxWidth: 400,
     margin: `${theme.spacing(1)}px auto`,
     padding: theme.spacing(2),
   },
@@ -39,7 +38,7 @@ const SkillsStructure = ({ title, skills, noTitleDisplay }) => {
       <Box paddingBottom={2}>
         <Grid container spacing={2}>
           {skills.map((oSkills, index) => (
-            <Grid item md={3} key={`skills_${title}_${index}`}>
+            <Grid item sm={12} md={3} key={`skills_${title}_${index}`}>
               <Paper className={classes.paper} elevation={3}>
                 <Grid container>
                   <Grid item>

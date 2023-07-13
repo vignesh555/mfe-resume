@@ -28,7 +28,7 @@ import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import ConstructionIcon from "@material-ui/icons/Build";
 import WorkIcon from "@material-ui/icons/Work";
 
-import Logo from "./images/Logo.png";
+import Logo from "./images/Logo2.png";
 import {
   mount as mountObjective,
   ObjectiveWrapper,
@@ -150,7 +150,7 @@ const App = (props) => {
       <CssBaseline />
       <Box marginTop={1}>
         <Grid container>
-          <Grid item md={2}>
+          <Grid item sm={12} md={2}>
             <img src={Logo} style={{ height: 70 }} />
             <Box className={classes.boxNavBar}>
               <List component="nav">
@@ -177,7 +177,7 @@ const App = (props) => {
               </List>
             </Box>
           </Grid>
-          <Grid item md={8}>
+          <Grid item sm={12} md={8}>
             <Box id="contactLinks" className={classes.centerContainer}>
               <Box className={classes.circleIcon}>
                 <EmailIcon fontSize="large" />
@@ -197,7 +197,7 @@ const App = (props) => {
               </Switch>
             </Router>
           </Grid>
-          <Grid item md={2} className={classes.rightContainer}>
+          <Grid item sm={12} md={2} className={classes.rightContainer}>
             <Button
               variant="contained"
               color="secondary"

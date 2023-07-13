@@ -9,9 +9,9 @@ const devConfiguration = {
     devtool: 'eval-source-map',
     devServer: {
         port: '8080',
-        historyApiFallback: {
-            index: 'index.html'
-        },
+        historyApiFallback: true,
+        contentBase: './',
+        hot: true,
         headers: {
             'Access-Control-Allow-Origin': '*',
         },

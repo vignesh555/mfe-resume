@@ -60,21 +60,23 @@ const App = () => {
   const classes = useStyles();
   return (
     <Paper elevation={3}>
-      <Box p={2}>
+      <Box p={4}>
         <Grid container className={classes.profilePicContainer}>
           <Grid item sm={12} md={12}>
             <img src={VigneshS} className={classes.profilePic} />
           </Grid>
           <Grid item sm={12} md={12}>
-            <Box paddingX={2} paddingY={1}>
+            <Box>
               <Typography variant="h4">VIGNESH SRINIVASAN</Typography>
             </Box>
-            <Box paddingX={2} paddingY={1} paddingBottom={5}>
+            <Box p={1}>
+              <Typography component="span" variant="h5">vigneshdotnet@gmail.com</Typography>
+              <Typography component="span" variant="h5"> | </Typography>
+              <Typography component="span" variant="h5">+6586943235</Typography>
+            </Box>
+            <Box p={2} paddingBottom={0}>
               <Typography variant="h6">{OBJECTIVE_DATA}</Typography>
             </Box>
-            <Button variant="contained" color="primary" style={{ height: 50 }}>
-              View Resume
-            </Button>
           </Grid>
         </Grid>
       </Box>

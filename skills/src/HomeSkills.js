@@ -1,12 +1,11 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import {
   Paper,
   makeStyles,
   Grid,
-  Avatar,
   Typography,
   Box,
-  Divider,
   Button,
 } from "common/CommonIndex";
 import SkillsStructureWithIcon from "./SkillsStructureWithIcon";
@@ -38,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
 
 const HomeSkills = () => {
   const classes = useStyles();
+  const history = useHistory();
+
+  const onClickRedirectSkills = () => history.push("/skills");
+
   return (
     <Paper elevation={3}>
       <Box p={2}>
@@ -53,7 +56,7 @@ const HomeSkills = () => {
           </Grid>
         </Grid>
         <Grid item sm={12} md={12} className={classes.skillsContainer}>
-          <Button variant="contained" color="primary" style={{ height: 50 }}>
+          <Button variant="contained" color="primary" style={{ height: 50 }} onClick={onClickRedirectSkills}>
             View All Skills
           </Button>
         </Grid>

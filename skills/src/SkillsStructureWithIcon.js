@@ -39,7 +39,7 @@ const SkillsStructureWithIcon = ({ title, skills }) => {
     <Box paddingBottom={2}>
       <Grid container spacing={2} className={classes.skillsItemWithIcon}>
         {skills.map((oSkills, index) => (
-          <Grid item md={3} key={`skills_${title}_${index}`}>
+          <Grid item sm={12} md={3} key={`skills_${title}_${index}`}>
             <Paper className={classes.paper} elevation={3}>
               <Grid container>
                 <Grid item>

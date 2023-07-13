@@ -14,6 +14,9 @@ const KEY_SKILLS = [
   { title: "Redux", version: "4", totalYears: "5", totalMonths: "0", icon: "http://localhost:8084/static/images/redux.png" },
   { title: "NodeJS", version: "14", totalYears: "4", totalMonths: "0", icon: "http://localhost:8084/static/images/nodejs.png" },
   { title: "Material UI", version: "4", totalYears: "5", totalMonths: "0", icon: "http://localhost:8084/static/images/material-ui.png" },
+  { title: "HTML", version: "5", totalYears: "11", totalMonths: "0", icon: "http://localhost:8084/static/images/html5.png" },
+  { title: "CSS", version: "3", totalYears: "11", totalMonths: "0", icon: "http://localhost:8084/static/images/css.png" },
+  { title: "Jest", version: "27", totalYears: "5", totalMonths: "0", icon: "http://localhost:8084/static/images/jest.png" },
 ];
 
 const LANGUAGE = [

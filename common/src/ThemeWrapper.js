@@ -30,6 +30,11 @@ export const theme = createTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
+        body: {
+          backgroundImage: `url('${DOMAIN_URL}/static/images/bg.avif')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        },
         '@font-face': {
           fontFamily: 'CustomFont-Regular',
           src: `url('${DOMAIN_URL}/static/fonts/Kalam/Kalam-Regular.ttf') format('truetype')`,
@@ -37,6 +42,10 @@ export const theme = createTheme({
           fontStyle: 'normal',
           fontDisplay: 'swap',
         },
+      },
+    },
+    MuiPaper: {
+      root: {
       },
     },
   },
