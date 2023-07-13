@@ -60,4 +60,5 @@ export {
   Chip,
   Button,
   ListItemIcon,
+  ThemeWrapper,
 };

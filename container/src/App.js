@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
   },
   contactLink: {
-    color: "#000"
+    color: "#000",
   },
   centerContainer: {
     display: "flex",
@@ -146,102 +146,95 @@ const App = () => {
   const onClickHome = () => history.push("/");
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box marginTop={1}>
-        <Grid container>
-          <Grid item sm={12} md={2}>
-            <img src={Logo} style={{ height: 70 }} />
-            <Box className={classes.boxNavBar}>
-              <List component="nav">
-                <ListItem
-                  onClick={onClickHome}
-                  button
-                  className={classes.centerContainer}
-                >
-                  <Box>
-                    <AccountBoxIcon fontSize="medium" />
-                    <Typography>About Me</Typography>
-                  </Box>
-                </ListItem>
-                <Divider />
-                <ListItem
-                  onClick={onClickSkills}
-                  button
-                  className={classes.centerContainer}
-                >
-                  <Box>
-                    <ConstructionIcon fontSize="medium" />
-                    <Typography>Skills</Typography>
-                  </Box>
-                </ListItem>
-                <Divider />
-                <ListItem
-                  onClick={onClickExperience}
-                  button
-                  className={classes.centerContainer}
-                >
-                  <Box>
-                    <WorkIcon fontSize="medium" />
-                    <Typography>Experience</Typography>
-                  </Box>
-                </ListItem>
-              </List>
-            </Box>
-          </Grid>
-          <Grid item sm={12} md={8}>
-            <Box id="contactLinks" className={classes.centerContainer}>
-              <a
-                href="mailto:vigneshdotnet@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.contactLink}
+    <>
+      <Grid container>
+        <Grid item sm={12} md={2}>
+          <img src={Logo} style={{ height: 70 }} />
+          <Box className={classes.boxNavBar}>
+            <List component="nav">
+              <ListItem
+                onClick={onClickHome}
+                button
+                className={classes.centerContainer}
               >
-                <Box className={classes.circleIcon}>
-                  <EmailIcon fontSize="large" />
+                <Box>
+                  <AccountBoxIcon fontSize="medium" />
+                  <Typography>About Me</Typography>
                 </Box>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/vignesh-srinivasan-03b0385b/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.contactLink}
+              </ListItem>
+              <Divider />
+              <ListItem
+                onClick={onClickSkills}
+                button
+                className={classes.centerContainer}
               >
-                <Box className={classes.circleIcon}>
-                  <LinkedInIcon fontSize="large" />
+                <Box>
+                  <ConstructionIcon fontSize="medium" />
+                  <Typography>Skills</Typography>
                 </Box>
-              </a>
-              <a
-                href="https://api.whatsapp.com/send?phone=9791092537"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={classes.contactLink}
+              </ListItem>
+              <Divider />
+              <ListItem
+                onClick={onClickExperience}
+                button
+                className={classes.centerContainer}
               >
-                <Box className={classes.circleIcon}>
-                  <WhatsAppIcon fontSize="large" />
+                <Box>
+                  <WorkIcon fontSize="medium" />
+                  <Typography>Experience</Typography>
                 </Box>
-              </a>
-            </Box>
-            <Router history={history}>
-              <Switch>
-                <Route path="/" exact component={ObjectiveWrapperFn} />
-                <Route path="/skills" component={SkillsWrapper} />
-                <Route path="/experience" component={ExperienceWrapper} />
-              </Switch>
-            </Router>
-          </Grid>
-          <Grid item sm={12} md={2} className={classes.rightContainer}>
-            <Button
-              variant="contained"
-              color="secondary"
-              style={{ height: 50 }}
-            >
-              Hire me
-            </Button>
-          </Grid>
+              </ListItem>
+            </List>
+          </Box>
         </Grid>
-      </Box>
-    </ThemeProvider>
+        <Grid item sm={12} md={8}>
+          <Box id="contactLinks" className={classes.centerContainer}>
+            <a
+              href="mailto:vigneshdotnet@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.contactLink}
+            >
+              <Box className={classes.circleIcon}>
+                <EmailIcon fontSize="large" />
+              </Box>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vignesh-srinivasan-03b0385b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.contactLink}
+            >
+              <Box className={classes.circleIcon}>
+                <LinkedInIcon fontSize="large" />
+              </Box>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=9791092537"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.contactLink}
+            >
+              <Box className={classes.circleIcon}>
+                <WhatsAppIcon fontSize="large" />
+              </Box>
+            </a>
+          </Box>
+          <Router history={history}>
+            <Switch>
+              <Route path="/" exact component={ObjectiveWrapperFn} />
+              <Route path="/skills" component={SkillsWrapper} />
+              <Route path="/experience" component={ExperienceWrapper} />
+            </Switch>
+          </Router>
+        </Grid>
+        <Grid item sm={12} md={2} className={classes.rightContainer}>
+          <Button variant="contained" color="secondary" style={{ height: 50 }}>
+            Hire me
+          </Button>
+        </Grid>
+      </Grid>
+    </>
   );
 };
 

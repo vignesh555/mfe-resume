@@ -1,12 +1,15 @@
-import './styles.css';
+import "./styles.css";
 import React from "react";
 
 import { Paper, Box, CssBaseline, Container } from "./components";
 
-import { ThemeProvider, createTheme, makeStyles } from "@material-ui/core/styles";
+import {
+  ThemeProvider,
+  createTheme,
+  makeStyles,
+} from "@material-ui/core/styles";
 
-
-console.log(DOMAIN_URL)
+console.log(DOMAIN_URL);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,28 +28,27 @@ const useStyles = makeStyles((theme) => ({
 
 export const theme = createTheme({
   typography: {
-    fontFamily: 'CustomFont-Regular'
+    fontFamily: "CustomFont-Regular",
   },
   overrides: {
     MuiCssBaseline: {
-      '@global': {
+      "@global": {
         body: {
           backgroundImage: `url('${DOMAIN_URL}/static/images/bg.avif')`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         },
-        '@font-face': {
-          fontFamily: 'CustomFont-Regular',
+        "@font-face": {
+          fontFamily: "CustomFont-Regular",
           src: `url('${DOMAIN_URL}/static/fonts/Kalam/Kalam-Regular.ttf') format('truetype')`,
-          fontWeight: 'normal',
-          fontStyle: 'normal',
-          fontDisplay: 'swap',
+          fontWeight: "normal",
+          fontStyle: "normal",
+          fontDisplay: "swap",
         },
       },
     },
     MuiPaper: {
-      root: {
-      },
+      root: {},
     },
   },
 });
@@ -56,11 +58,7 @@ const ThemeWrapper = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Paper elevation={3} className={classes.paperWidth}>
-          <Box className={classes.box}>{props.children}</Box>
-        </Paper>
-      </Container>
+      <Box marginTop={1}>{props.children}</Box>
     </ThemeProvider>
   );
 };

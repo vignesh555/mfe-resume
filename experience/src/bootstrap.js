@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { theme, Box, CssBaseline, Paper, makeStyles, ThemeProvider, Container } from "common/CommonIndex";
+import {
+  theme,
+  Box,
+  CssBaseline,
+  Paper,
+  makeStyles,
+  ThemeProvider,
+  Container,
+  ThemeWrapper as ThemeWrapperCommon,
+} from "common/CommonIndex";
 
 import App from "./App";
 
@@ -22,25 +31,23 @@ const useStyles = makeStyles((theme) => ({
 const LocalWrapper = () => {
   const classes = useStyles();
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Paper elevation={3} className={classes.paperWidth}>
-          <Box className={classes.box}>
-            <App />
-          </Box>
-        </Paper>
-      </Container>
-    </ThemeProvider>
+    <ThemeWrapperCommon>
+      <Grid container>
+        <Grid item md={2}></Grid>
+        <Grid item md={8}>
+          <App />
+        </Grid>
+        <Grid item md={2}></Grid>
+      </Grid>
+    </ThemeWrapperCommon>
   );
 };
 
 const ThemeWrapper = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <App />
-    </ThemeProvider>
+    </>
   );
 };
 

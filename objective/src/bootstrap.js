@@ -9,6 +9,7 @@ import {
   makeStyles,
   ThemeProvider,
   Container,
+  ThemeWrapper as ThemeWrapperCommon,
 } from "common/CommonIndex";
 
 import App from "./App";
@@ -31,32 +32,31 @@ const useStyles = makeStyles((theme) => ({
 const LocalWrapper = () => {
   const classes = useStyles();
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box marginTop={1}>
-        <Grid container>
-          <Grid item md={2}></Grid>
-          <Grid item md={8}>
-            <App />
-          </Grid>
-          <Grid item md={2}></Grid>
-        </Grid>
-      </Box>
-    </ThemeProvider>
+    <Grid container>
+      <Grid item md={2}></Grid>
+      <Grid item md={8}>
+        <App />
+      </Grid>
+      <Grid item md={2}></Grid>
+    </Grid>
   );
 };
 
 const ThemeWrapper = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <App />
-    </ThemeProvider>
+    </>
   );
 };
 
 const mountLocal = (el) => {
-  ReactDom.render(<LocalWrapper />, el);
+  ReactDom.render(
+    <ThemeWrapperCommon>
+      <LocalWrapper />
+    </ThemeWrapperCommon>,
+    el
+  );
 };
 
 const mount = (el) => {

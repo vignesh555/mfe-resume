@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { theme, Box, CssBaseline, Paper, makeStyles, ThemeProvider, Grid } from "common/CommonIndex";
+import { 
+  theme, Box, CssBaseline, Paper, makeStyles, ThemeProvider, Grid,
+  ThemeWrapper as ThemeWrapperCommon,
+} from "common/CommonIndex";
 
 import App from "./App";
 import HomeSkills from "./HomeSkills";
@@ -23,9 +26,7 @@ const useStyles = makeStyles((theme) => ({
 const LocalWrapper = () => {
   const classes = useStyles();
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box marginTop={1}>
+    <ThemeWrapperCommon>
         <Grid container>
           <Grid item md={2}></Grid>
           <Grid item md={8}>
@@ -36,26 +37,23 @@ const LocalWrapper = () => {
           </Grid>
           <Grid item md={2}></Grid>
         </Grid>
-      </Box>
-    </ThemeProvider>
+    </ThemeWrapperCommon>
   );
 };
 
 const ThemeWrapper = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <App />
-    </ThemeProvider>
+    </>
   );
 };
 
 const HomeSkillsWrapper = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
       <HomeSkills />
-    </ThemeProvider>
+    </>
   );
 };
 
