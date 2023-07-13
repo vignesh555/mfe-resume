@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
-import { Router, Route, Switch } from "react-router-dom";
-import { createBrowserHistory } from 'history';
+import { Router, Route, Switch, Link } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 import {
   theme,
@@ -38,13 +38,15 @@ import { mount as mountExperience } from "experience/ExperienceIndex";
 import { mount as mountSkills, HomeSkillsWrapper } from "skills/SkillsIndex";
 import HeaderBar from "./HeaderBar";
 
-
 const history = createBrowserHistory();
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
+  },
+  contactLink: {
+    color: "#000"
   },
   centerContainer: {
     display: "flex",
@@ -135,11 +137,9 @@ const SkillsWrapper = () => {
   return <div className={classes.objectiveContainer} ref={elSkillsRef}></div>;
 };
 
-const App = (props) => {
+const App = () => {
   const classes = useStyles();
   const history = createBrowserHistory();
-
-  console.log(history);
 
   const onClickSkills = () => history.push("/skills");
   const onClickExperience = () => history.push("/experience");
@@ -154,21 +154,33 @@ const App = (props) => {
             <img src={Logo} style={{ height: 70 }} />
             <Box className={classes.boxNavBar}>
               <List component="nav">
-                <ListItem onClick={onClickHome} button className={classes.centerContainer}>
+                <ListItem
+                  onClick={onClickHome}
+                  button
+                  className={classes.centerContainer}
+                >
                   <Box>
                     <AccountBoxIcon fontSize="medium" />
                     <Typography>About Me</Typography>
                   </Box>
                 </ListItem>
                 <Divider />
-                <ListItem onClick={onClickSkills} button className={classes.centerContainer}>
+                <ListItem
+                  onClick={onClickSkills}
+                  button
+                  className={classes.centerContainer}
+                >
                   <Box>
                     <ConstructionIcon fontSize="medium" />
                     <Typography>Skills</Typography>
                   </Box>
                 </ListItem>
                 <Divider />
-                <ListItem onClick={onClickExperience} button className={classes.centerContainer}>
+                <ListItem
+                  onClick={onClickExperience}
+                  button
+                  className={classes.centerContainer}
+                >
                   <Box>
                     <WorkIcon fontSize="medium" />
                     <Typography>Experience</Typography>
@@ -179,15 +191,36 @@ const App = (props) => {
           </Grid>
           <Grid item sm={12} md={8}>
             <Box id="contactLinks" className={classes.centerContainer}>
-              <Box className={classes.circleIcon}>
-                <EmailIcon fontSize="large" />
-              </Box>
-              <Box className={classes.circleIcon}>
-                <LinkedInIcon fontSize="large" />
-              </Box>
-              <Box className={classes.circleIcon}>
-                <WhatsAppIcon fontSize="large" />
-              </Box>
+              <a
+                href="mailto:vigneshdotnet@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.contactLink}
+              >
+                <Box className={classes.circleIcon}>
+                  <EmailIcon fontSize="large" />
+                </Box>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/vignesh-srinivasan-03b0385b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.contactLink}
+              >
+                <Box className={classes.circleIcon}>
+                  <LinkedInIcon fontSize="large" />
+                </Box>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=9791092537"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes.contactLink}
+              >
+                <Box className={classes.circleIcon}>
+                  <WhatsAppIcon fontSize="large" />
+                </Box>
+              </a>
             </Box>
             <Router history={history}>
               <Switch>
